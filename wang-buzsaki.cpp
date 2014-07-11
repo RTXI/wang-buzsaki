@@ -33,9 +33,7 @@
 
 // Model Functions
 
-static inline double
-alpha_m(double V)
-{
+static inline double alpha_m(double V) {
 	double x = -(V + 35.0);
 	double y = 10.0;
 	
@@ -45,33 +43,23 @@ alpha_m(double V)
 	return 0.1 * x / (exp(x / y) - 1.0);
 }
 
-static inline double
-beta_m(double V)
-{
+static inline double beta_m(double V) {
 	return 4 * exp(-0.0556 * (V + 60));
 }
 
-static inline double
-m_inf(double V)
-{
+static inline double m_inf(double V) {
 	return alpha_m(V) / (alpha_m(V) + beta_m(V));
 }
 
-static inline double
-alpha_h(double V)
-{
+static inline double alpha_h(double V) {
 	return 0.07 * exp(-0.05 * (V + 58.0));
 }
 
-static inline double
-beta_h(double V)
-{
+static inline double beta_h(double V) {
 	return 1.0 / (1.0 + exp(-0.1 * (V + 28)));
 }
 
-static inline double
-alpha_n(double V)
-{
+static inline double alpha_n(double V) {
 	double x = -(V + 34);
 	double y = 10.0;
 	
@@ -81,19 +69,15 @@ alpha_n(double V)
 	return 0.01 * x / (exp(x / y) - 1.0);
 }
 
-static inline double
-beta_n(double V)
-{
+static inline double beta_n(double V) {
 	return 0.125 * exp(-0.0125 * (V + 44));
 }
 
-extern "C" Plugin::Object *
-createRTXIPlugin(void)
-{
+extern "C" Plugin::Object *createRTXIPlugin(void) {
 	return new wbscaled();
 }
 
-static DefaultGUIModel::variable_t vars[] =
+static DefaultGUIModel::variable_t vars[] = 
 {
 	{ "Vm", "Membrane Potential (V)", DefaultGUIModel::OUTPUT, },
 	{ "Istim", "Input current (A)", DefaultGUIModel::INPUT, },
