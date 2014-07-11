@@ -1,9 +1,8 @@
-
 PLUGIN_NAME = wang_buzsaki
 
-HEADERS = wbscaled.h
+HEADERS = wang-buzsaki.h
 
-SOURCES = wbscaled.cpp 
+SOURCES = wang-buzsaki.cpp 
 
 LIBS = 
 
