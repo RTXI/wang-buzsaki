@@ -3,11 +3,13 @@
 **Requirements:** None  
 **Limitations:** None  
 
+![WB Neuron GUI](wang-buzsaki.png)
+
+<!--start-->
 The Wang-Buzsaki model uses the Hodgkin-Huxley formalism to describe a single-compartment neuron with sodium and potassium conductances. For the transient sodium current, the activation variable m is assumed fast and substituted by its steady-state function.
 
 Wang XJ, Buzsáki G (1996) Gamma oscillation by synaptic inhibition in a hippocampal interneuronal network model. J. Neurosci. 16: 6402–6413.
-
-![WB Neuron GUI](wang-buzsaki.png)
+<!--end-->
 
 ####Input Channels
 1. input(0) - Istim : input current  (A)
