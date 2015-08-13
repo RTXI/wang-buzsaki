@@ -128,7 +128,7 @@ wbscaled::wbscaled(void) : DefaultGUIModel("Wang Buzsaki - scaled", ::vars, ::nu
 	createGUI(vars, num_vars);
 	update(INIT);
 	refresh();
-	QTimer::singleShot(0, this, SLOT(resizeMe()));
+	resizeMe();
 }
 
 wbscaled::~wbscaled(void)
